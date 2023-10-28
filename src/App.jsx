@@ -11,8 +11,6 @@ import PasswordVerify from './pages/user.pages/PasswordVerify';
 import PrivateRoute from './pages/user.pages/PrivateRoute';
 import Main from './pages/gmail.page/Main';
 import Emails from './pages/gmail.page/MaterialUI/Components/Emails';
-import { Suspense } from 'react';
-import SuspenseLoader from './pages/gmail.page/MaterialUI/common/SuspenseLoader';
 import ViewEmail from './pages/gmail.page/MaterialUI/common/ViewEmail';
 import SuccessPage from './pages/user.pages/successPage';
 
@@ -20,7 +18,6 @@ function App() {
    
 
   return (
-    <Suspense fallback={<SuspenseLoader/>}>
     <BrowserRouter>
     <Routes>
       <Route index path='/main/:category' element={<PrivateRoute element={<Main/>}/>}/>
@@ -37,7 +34,6 @@ function App() {
       <Route path='/verifyForgotPassword' element={<PasswordVerify/>}/>
     </Routes>
     </BrowserRouter>
-    </Suspense>
   )
 }
 
