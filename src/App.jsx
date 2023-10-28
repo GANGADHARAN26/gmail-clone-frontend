@@ -13,6 +13,7 @@ import Main from './pages/gmail.page/Main';
 import Emails from './pages/gmail.page/MaterialUI/Components/Emails';
 import ViewEmail from './pages/gmail.page/MaterialUI/common/ViewEmail';
 import SuccessPage from './pages/user-pages/SuccessPage';
+import RoutePage from './pages/user-pages/RoutePage';
 
 function App() {
    
@@ -20,7 +21,8 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route index path='/main/:category' element={<PrivateRoute element={<Main/>}/>}/>
+    <Route  path='/' element={<PrivateRoute element={<PrivateRoute element={<RoutePage/>}/>}/>}/>
+      <Route  path='/main/:category' element={<PrivateRoute element={<Main/>}/>}/>
       <Route path='/viewemail/:id' element={<PrivateRoute element={<ViewEmail/>}/>}/>
       <Route path='/emails' e element={<PrivateRoute element={<Emails/>}/>}/>
       <Route path='/login' element={<LoginUser/>} />
