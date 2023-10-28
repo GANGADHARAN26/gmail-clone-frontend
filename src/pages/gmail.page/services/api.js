@@ -1,8 +1,7 @@
 import axios from "axios";
 import { backendUrl } from './../../../../config';
-const accountEmail = JSON.parse(localStorage.getItem("user"));
-const accessToken=accountEmail.accessToken;
-const API_GAMIL =async(urlObject,payload)=>{
+
+const API_GAMIL =async(urlObject,payload,accessToken)=>{
     return await axios({
         method:urlObject.method,
         url:`${backendUrl}/email/${urlObject.endpoint}`,
