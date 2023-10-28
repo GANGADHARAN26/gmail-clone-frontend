@@ -12,7 +12,7 @@ import PrivateRoute from './pages/user-pages/PrivateRoute';
 import Main from './pages/gmail.page/Main';
 import Emails from './pages/gmail.page/MaterialUI/Components/Emails';
 import ViewEmail from './pages/gmail.page/MaterialUI/common/ViewEmail';
-import SuccessPage from './pages/user-pages/successPage';
+import SuccessPage from './pages/user-pages/SuccessPage';
 
 function App() {
    
