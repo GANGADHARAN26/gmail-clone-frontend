@@ -1,18 +1,18 @@
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import './App.css'
-import RegisterUser from './pages/user.pages/RegisterUser';
-import ForgotPassword from './pages/user.pages/ForgotPassword';
-import UpdatePassword from './pages/user.pages/UpdatePassword'; 
-import ForgotInfo from './pages/user.pages/ForgotInfo';
-import Info from './pages/user.pages/Info';
-import UserVerification from './pages/user.pages/UserVerification';
-import LoginUser from './pages/user.pages/LoginUser';
-import PasswordVerify from './pages/user.pages/PasswordVerify';
-import PrivateRoute from './pages/user.pages/PrivateRoute';
+import RegisterUser from './pages/user-pages/RegisterUser';
+import ForgotPassword from './pages/user-pages/ForgotPassword';
+import UpdatePassword from './pages/user-pages/UpdatePassword'; 
+import ForgotInfo from './pages/user-pages/ForgotInfo';
+import Info from './pages/user-pages/Info';
+import UserVerification from './pages/user-pages/UserVerification';
+import LoginUser from './pages/user-pages/LoginUser';
+import PasswordVerify from './pages/user-pages/PasswordVerify';
+import PrivateRoute from './pages/user-pages/PrivateRoute';
 import Main from './pages/gmail.page/Main';
 import Emails from './pages/gmail.page/MaterialUI/Components/Emails';
 import ViewEmail from './pages/gmail.page/MaterialUI/common/ViewEmail';
-import SuccessPage from './pages/user.pages/successPage';
+import SuccessPage from './pages/user-pages/successPage';
 
 function App() {
    
