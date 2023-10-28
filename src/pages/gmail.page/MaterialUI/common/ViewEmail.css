@@ -1,0 +1,43 @@
+.view-email-topbar{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 1%;
+}
+.view-icon{
+    padding-left: 1%;
+}
+.view-icon:hover{
+    transition: all 0.5;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transition: all 0.5;
+    -moz-transition: all 0.5;
+    -ms-transition: all 0.5;
+    -o-transition: all 0.5;
+}
+.view-email-container-topbar{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5.5%;
+    padding-top: 2%;
+}
+
+.container-top-bar{
+    padding-left: 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-side-topic{
+    display: flex;
+}
+#t1{
+    padding-right: 10px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+}
