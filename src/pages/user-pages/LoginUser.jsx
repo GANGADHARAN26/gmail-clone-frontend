@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { backendUrl } from "../../../config";
+import './LoginUser.css';
 const LoginUser = () => {
   const navigate=useNavigate();
 
@@ -54,7 +55,7 @@ const LoginUser = () => {
   return (
     <section className="container-fluid" style={{marginTop:'9%'}}>
     <section className="row justify-content-center">
-      <section className="col-12 col-sm-6 col-md-4 border  rounded p-2 px-5">
+      <section id="login-box" className="col-12 col-sm-6 col-md-4 border  rounded p-2 px-5">
       <h1 className="d-flex justify-content-center fs-1">Login Form</h1>
       <form>
       <div className="form-group">
