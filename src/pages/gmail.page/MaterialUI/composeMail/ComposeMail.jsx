@@ -62,7 +62,6 @@ const ComposeMail = ({openDialog,setOpenDialog}) => {
         const sendMail=(e)=>{
             e.preventDefault();
             const accountEmail=JSON.parse(localStorage.getItem('user'))
-         
           const payload={
             to:data.to,
             from:accountEmail.email,
@@ -81,7 +80,6 @@ const ComposeMail = ({openDialog,setOpenDialog}) => {
         }  
         const onValueChange=(e)=>{
             setData({...data,[e.target.name]:e.target.value});
-            console.log(data)
             e.preventDefault();
         }
   return (

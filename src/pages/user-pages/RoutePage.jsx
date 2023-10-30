@@ -1,8 +1,33 @@
+import Box from '@mui/material/Box';
+import { LinearProgress} from '@mui/material';
+import { Typography } from '@mui/material';
+
+
 
 const RoutePage = () => {
-    window.location.href="./main/normal"
+  setTimeout(() => window.location.href="./main/normal",[1000])
+    
   return (
-    <div style={{display:"flex",justifyContent:"center",alignContent:"center"}}>Redirecting to mail page</div>
+    <Box 
+    sx={{ 
+      display: 'flex' ,
+      justifyContent:'space-around',
+      alignItems:'center'}}>
+      <Box sx={{ width: '100%' }}>
+      <LinearProgress />
+      <Typography variant='h3'
+      sx={{
+        display: 'flex',
+        justifyContent:'center',
+        marginTop:'16%'
+      }}>
+
+<img src="../../../public/gmail.svg" alt="Gmail" style={{width:'100px'}}/>
+&nbsp;<span style={{display:'flex',alignItems:'center'}}>Gmail Application</span>
+</Typography>
+    </Box>
+   
+  </Box>
   )
 }
 

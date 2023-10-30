@@ -37,6 +37,7 @@ const Emails = ({ openDrawer, category }) => {
   const accessToken=accountEmail.accessToken;
   const [id, setId] = useState();
   const [activateViewMail, setViewEmail] = useState(false);
+  
   const loadMail = async () => {
     const response = await fetch(`${backendUrl}/email/${category}`, {
       method: "POST",
@@ -65,11 +66,9 @@ const Emails = ({ openDrawer, category }) => {
 
   useEffect(() => {
     setLength(emails ? emails.length : 0);
-    console.log("checkboxEmail",checkboxEmail)
     loadMail();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category, emails.length]);
-  console.log("email lenth check");
   // console.log(emails.data);
   const handleViewEmail = (e, id) => {
     e.preventDefault();
@@ -82,7 +81,6 @@ const Emails = ({ openDrawer, category }) => {
 
   const handleChange = async (e, name, id) => {
     e.preventDefault();
-    console.log(name);
     setEmail((prevEmails) =>
       prevEmails.map((email) =>
         email._id === id ? { ...email, starred: !email.starred } : email
@@ -94,7 +92,6 @@ const Emails = ({ openDrawer, category }) => {
       [name]: !prevUpdate[name],
     }));
     console.log(name);
-    console.log("handle update", update);
     try {
       await fetch(`${backendUrl}/email/${name}`, {
         method: "POST",
@@ -104,7 +101,6 @@ const Emails = ({ openDrawer, category }) => {
         },
         body: JSON.stringify({ [name]: !update[name], _id: id }),
       });
-      console.log({ [name]: !update[name] });
     } catch (error) {
       console.log(error.message);
     }
@@ -112,8 +108,6 @@ const Emails = ({ openDrawer, category }) => {
   const handleSelectAll=(e)=>{
     if(e.target.checked){
       setCheckboxEmail(emails.map((email)=>email._id));
-      console.log("CheckBoxMail",checkboxEmail) 
-      console.log(showOptions)
       setShowOptions(true);
       showOptions(false);
 
@@ -127,7 +121,6 @@ const Emails = ({ openDrawer, category }) => {
       setCheckboxEmail((prevCheckboxEmail) => {
         const updatedEmails = [...prevCheckboxEmail, id];
         setShowOptions(true);
-        console.log(checkboxEmail)  
         return updatedEmails;
       });
     } else {
@@ -153,7 +146,6 @@ const Emails = ({ openDrawer, category }) => {
         },
         body: JSON.stringify({"ids":checkboxEmail}),
       });
-      console.log({"ids":checkboxEmail});
     }
     catch(error)
     {

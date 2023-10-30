@@ -6,22 +6,21 @@ const LoginUser = () => {
   const navigate=useNavigate();
 
     const initialState = {
-        email:"",
-        password:"",
+        email:"gangadharana01@gmail.com",
+        password:"dharan",
     }
     const [formData,setFormData] =useState(initialState)
     const navigateToRegister=()=>{
         navigate('/register')
       }
       const navigateToMain=()=>{
-        navigate('/main/normal')
+        navigate('/')
       }
       const navigateToForgot=()=>{
         navigate('/forgotPassword')
       }
     const handleSubmit=async(e)=>{
          e.preventDefault();
-         console.log(formData);
          const loginResponse=await fetch(`${backendUrl}/user/login`,{
             method: 'POST',
             body:JSON.stringify(formData),
@@ -31,7 +30,6 @@ const LoginUser = () => {
         })
 
         const data=await loginResponse.json();
-         console.log("response",data);
          if(loginResponse.status===401)
          {
             alert('Login failed invalid credentials please try again with correct credentials')
@@ -64,6 +62,7 @@ const LoginUser = () => {
           className="form-control m-1"
             name="email" 
             type="email" 
+            value={formData.email}
             onChange={(e)=>setFormData({...formData,email:e.target.value})}
             placeholder="Enter your email" />
             
@@ -74,6 +73,7 @@ const LoginUser = () => {
           className="form-control m-1"
             name="password"
             type="passsword"
+            value={formData.password}
             onChange={(e)=>setFormData({...formData,password:e.target.value})}
             placeholder="Enter your password"
           />

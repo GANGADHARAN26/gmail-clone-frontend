@@ -97,7 +97,6 @@ const ViewEmail = ({id}) => {
                 },
                 body: JSON.stringify({[name]:!update[name],_id:id})
               })
-              console.log({[name]:!update[name]})
              }
              catch(error)
             {

@@ -131,7 +131,7 @@ const logoutFuntion =()=>{
         sx:dialogStyle
       }}
       >
-        <div className="account-box">
+        <Box className="account-box">
           <div className="top-bar">
             <IconButton onClick={()=>setViewAccount(false)}>
                <CloseIcon/>
@@ -153,7 +153,7 @@ const logoutFuntion =()=>{
                color="success">
                 <LogoutIcon/> Logout</Button> 
           </div>
-        </div>
+        </Box>
       </Dialog>
     </StyledAppBar>
   );

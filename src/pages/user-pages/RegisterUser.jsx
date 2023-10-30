@@ -20,7 +20,6 @@ const navigateToInfo=()=>{
     const [userData,setUserData]=useState(initialState)
     const handleSubmit = async(e) => {
       e.preventDefault();
-        console.log(userData)
         const userResponse=await fetch(`${backendUrl}/user/register`,{
             method:'POST',
             body:JSON.stringify(userData),
