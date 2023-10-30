@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import { LinearProgress} from '@mui/material';
 import { Typography } from '@mui/material';
-
+import gmail from '../../../public/gmail.svg'
 
 
 const RoutePage = () => {
@@ -22,7 +22,7 @@ const RoutePage = () => {
         marginTop:'16%'
       }}>
 
-<img src="../../../public/gmail.svg" alt="Gmail" style={{width:'100px'}}/>
+<img src={gmail} alt="Gmail" style={{width:'100px'}}/>
 &nbsp;<span style={{display:'flex',alignItems:'center'}}>Gmail Application</span>
 </Typography>
     </Box>
