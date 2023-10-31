@@ -1,11 +1,11 @@
 import Box from '@mui/material/Box';
 import { LinearProgress} from '@mui/material';
 import { Typography } from '@mui/material';
-import gmail from '../../../public/gmail.svg'
+import gmail from '../gmail.page/MaterialUI/assets/gmail.svg';
 
 
 const RoutePage = () => {
-  setTimeout(() => window.location.href="./main/normal",[1000])
+  setTimeout(() => window.location.href="./main/normal",[3000])
     
   return (
     <Box 

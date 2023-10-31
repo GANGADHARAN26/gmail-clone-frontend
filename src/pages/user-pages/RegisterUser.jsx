@@ -33,7 +33,7 @@ const navigateToInfo=()=>{
           navigateToInfo();
           
         }
-        else if(userResponse.status===409){
+        else if(userResponse.status===400){
           alert("user already exists please login");
           setUserData(initialState)
         }
